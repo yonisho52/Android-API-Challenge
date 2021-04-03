@@ -24,19 +24,28 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/textViewLineNativeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginTop="3dp"
+            android:text="Native Name" />
+
+        <TextView
             android:id="@+id/textViewLineCountryShort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:gravity="left"
-            android:text="Country Short" />
+            android:text="Country Short"
+            android:layout_marginTop="1dp"
+            android:textSize="10sp" />
     </LinearLayout>
 
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="90dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"

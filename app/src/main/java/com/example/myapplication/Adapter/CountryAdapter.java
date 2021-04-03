@@ -39,12 +39,14 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.textViewCountryName.setText(countries.get(position).getName());
         holder.textViewCountryShort.setText(countries.get(position).getShortName());
+        holder.textViewNativeName.setText(countries.get(position).getNativeName());
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, ShowBordersActivity.class);
                 intent.putExtra("country", countries.get(position).getName());
                 intent.putExtra("country_short", countries.get(position).getShortName());
+                intent.putExtra("country_native_name", countries.get(position).getNativeName());
                 intent.putExtra("borders", countries.get(position).getBorders());
                 mContext.startActivity(intent);
             }
@@ -59,13 +61,14 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewCountryName, textViewCountryShort;
+        TextView textViewCountryName, textViewCountryShort, textViewNativeName;
         ConstraintLayout mainLayout;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewCountryName = itemView.findViewById(R.id.textViewLineCountry);
             mainLayout = itemView.findViewById(R.id.mainLayout);
             textViewCountryShort = itemView.findViewById(R.id.textViewLineCountryShort);
+            textViewNativeName = itemView.findViewById(R.id.textViewLineNativeName);
         }
     }
 

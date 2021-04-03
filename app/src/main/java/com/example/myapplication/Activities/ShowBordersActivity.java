@@ -26,14 +26,13 @@ import java.util.ArrayList;
 
 public class ShowBordersActivity extends AppCompatActivity {
 
-    TextView textViewCountryName, textViewCountryShort;
-    String countryName, countryNameShort;
+    String countryName, countryNameShort, countryNativeName;
     ArrayList<String> borders;
     final String COUNTRY_INFO = "https://restcountries.eu/rest/v2/alpha/";
     ArrayList<Country> countryBorders;
     CountryAdapter countryAdapter;
     RecyclerView recyclerViewBorders;
-    TextView textViewNoBorders;
+    TextView textViewNoBorders, textViewNativeName, textViewCountryName, textViewCountryShort;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +45,7 @@ public class ShowBordersActivity extends AppCompatActivity {
         countryBorders = new ArrayList<>();
         recyclerViewBorders = findViewById(R.id.recyclerViewBorders);
         textViewNoBorders = findViewById(R.id.textViewNoBorders);
+        textViewNativeName = findViewById(R.id.textViewNativeName);
 
         getData();
         setData();
@@ -56,6 +56,7 @@ public class ShowBordersActivity extends AppCompatActivity {
         {
             countryName = getIntent().getStringExtra("country");
             countryNameShort = getIntent().getStringExtra("country_short");
+            countryNativeName = getIntent().getStringExtra("country_native_name");
             borders = getIntent().getStringArrayListExtra("borders");
             if(borders.size()==0)
             {
@@ -92,6 +93,7 @@ public class ShowBordersActivity extends AppCompatActivity {
                         Country country = new Country(
                                 response.getString("name"),
                                 response.getString("alpha2Code"),
+                                response.getString("nativeName"),
                                 listBordersJsonToArray);
                         countryBorders.add(country);
                     } catch (JSONException e) {
@@ -111,6 +113,7 @@ public class ShowBordersActivity extends AppCompatActivity {
     private void setData() {
         textViewCountryName.setText(countryName);
         textViewCountryShort.setText(countryNameShort);
+        textViewNativeName.setText(countryNativeName);
 
         try {
             Thread.sleep(500);

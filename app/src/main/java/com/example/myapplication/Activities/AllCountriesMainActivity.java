@@ -90,6 +90,7 @@ public class AllCountriesMainActivity extends AppCompatActivity {
                         Country country = new Country(
                                 countries.getString("name"),
                                 countries.getString("alpha2Code"),
+                                countries.getString("nativeName"),
                                 list);
 
                         countryArrayList.add(country);

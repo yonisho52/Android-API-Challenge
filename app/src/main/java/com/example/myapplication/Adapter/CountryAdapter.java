@@ -58,8 +58,6 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.MyViewHo
         return countries.size();
     }
 
-
-
     public class MyViewHolder extends RecyclerView.ViewHolder {
         TextView textViewCountryName, textViewCountryShort, textViewNativeName;
         ConstraintLayout mainLayout;

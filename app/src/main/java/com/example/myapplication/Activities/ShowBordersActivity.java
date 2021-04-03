@@ -67,7 +67,6 @@ public class ShowBordersActivity extends AppCompatActivity {
                 textViewNoBorders.setVisibility(View.GONE);
                 getBordersInfo(borders);
             }
-
         }
     }
 

@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:text="No Boredrs To This Country"
+        android:text="No Borders To This Country"
         android:textSize="24sp"
         android:textStyle="bold"
         android:paddingTop="50dp"

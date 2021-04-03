@@ -10,6 +10,10 @@
 
 # Results:
 
-Showing all the countries on the main screen:
+<p align="center">
 
-<img align="center" src="https://github.com/yonisho52/Android-API-Challenge/blob/main/Result%20Images/all%20countries.jpg" width="300" >
+| Main Page - All Countries  | Main Page - All Countries | Borders Page |
+| ------------- | ------------- | ------------- |
+| Showing all the countries  | Showing Search Functionality  | Showing Border of the clicked country  |
+| <img src="https://github.com/yonisho52/Android-API-Challenge/blob/main/Result%20Images/all%20countries.jpg" width="250" >  | <img src="https://github.com/yonisho52/Android-API-Challenge/blob/main/Result%20Images/all%20countries.jpg" width="250" >  | <img src="https://github.com/yonisho52/Android-API-Challenge/blob/main/Result%20Images/all%20countries.jpg" width="250" >  |
+</p>

@@ -1,5 +1,4 @@
 # Android-API-Challenge
-​
 - Create an app with a home screen that displays a table of all the countries of the world.
 
 - Each row in the table shows the original country name (nativeName) and the country name in English.
